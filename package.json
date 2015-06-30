@@ -1,0 +1,45 @@
+{
+  "name": "jquery-multifield",
+  "version": "1.0.0",
+  "author": {
+    "name": "Max Kostinevich",
+    "url": "https://maxkostinevich.com"
+  },
+  "description": "A jQuery plugin which allows you to create dynamic field groups.",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/maxkostinevich/jquery-multifield/blob/master/LICENSE.txt"
+    }
+  ],
+  "homepage": "https://github.com/maxkostinevich/jquery-multifield",
+  "main": "./jquery.multifield.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxkostinevich/jquery-multifield.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maxkostinevich/jquery-multifield/issues"
+  },
+  "keywords": [
+    "jquery",
+    "form",
+    "field",
+    "multi-field",
+    "multiple-fields",
+    "jquery-plugin",
+    "dynamic-fields"
+  ],
+  "files": [
+    "changelog.md",
+    "jquery.multifield.js",
+    "jquery.multifield.min.js",
+    "README.md",
+    "LICENSE.txt"
+  ],
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest"
+  }
+}

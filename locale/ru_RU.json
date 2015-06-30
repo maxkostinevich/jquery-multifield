@@ -1,0 +1,7 @@
+{
+  "multiField":	{
+	"messages": {
+	  "removeConfirmation": "Вы уверены, что вы хотите удалить этот элемент?"
+	}
+  }
+}
