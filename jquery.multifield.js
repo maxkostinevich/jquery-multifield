@@ -24,7 +24,13 @@
 		this.$elem = $(elem);
 		this.options = options;
 		// Localization
-		this.localize_i18n='';
+		this.localize_i18n={
+        "multiField": {
+          "messages": {
+            "removeConfirmation": "Are you sure you want to remove this section?"
+          }
+        }
+      };
 
 		// This next line takes advantage of HTML5 data attributes
 		// to support customization of the plugin on a per-element
@@ -49,10 +55,10 @@
 			this.config = $.extend({}, this.defaults, this.options,
 				this.metadata);
 
-			// Load localization file
-			$.when(this.loadLocale()).done(function(data){
-				$this.localize_i18n = data;
-			});
+			// Load localization object
+      if(this.config.locale !== 'default'){
+  			$this.localize_i18n = this.config.locale;
+      }
 
 			// Hide 'Remove' buttons if only one section exists
 			if(this.getSectionsCount()<2) {
@@ -75,19 +81,6 @@
 			return this;
 		},
 
-		/*
-		 * Load localization file via AJAX
-		 */
-		loadLocale: function(){
-			return $.ajax({
-				url: 'locale/'+this.config.locale+'.json',
-				dataType: 'json',
-				async: true,
-				error: function( data ) {
-					console.log("Localization file not found");
-				}
-			});
-		},
 
 		/*
 		 * Add new section
