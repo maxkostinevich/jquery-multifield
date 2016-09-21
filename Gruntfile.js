@@ -45,6 +45,5 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 
-	//регистрируем задачу
 	grunt.registerTask('default', ['jshint', 'uglify']);
 };

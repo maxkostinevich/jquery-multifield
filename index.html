@@ -292,8 +292,7 @@ $('#example-3').multifield({
 		<div class="col-md-12">
 			<h2>Example #4 (Localization) <a data-toggle="collapse" class="btn btn-warning" href="#srcExample4" aria-expanded="false" aria-controls="srcExample4">SOURCE</a></h2>
 			<p>You can translate confirmation message which appears on section remove.</p>
-			<p>Copy default.json file and rename it to locale_LOCALE.json (e.g. de_DE.json, pt_BR.json and etc.).</p>
-			<p>And then pass your locale name through the 'locale' option, for example: locale: 'de_DE'.</p>
+			<p>To do so just pass an object with translated strings through the 'locale' option.</p>
 			<div class="collapse" id="srcExample4">
 <pre>
 &lt;div id="example-4" class="content"&gt;
@@ -322,7 +321,13 @@ $('#example-4').multifield({
 	section: '.group',
 	btnAdd:'#btnAdd-4',
 	btnRemove:'.btnRemove',
-	locale:'ru_RU'
+	locale:{
+          "multiField": {
+            "messages": {
+              "removeConfirmation": "Вы уверены, что вы хотите удалить этот элемент?"
+            }
+          }
+        }
 });
 &lt;/script&gt;
 </pre>
@@ -573,7 +578,7 @@ $_POST['user_role'][0]; // manager
 	<div class="content footer">
 		<div class="row">
 			<div class="col-md-12">
-				2015 &copy; <a href="https://maxkostinevich.com" target="_blank" title="Max Kostinevich">Max Kostinevich</a>
+				2016 &copy; <a href="https://maxkostinevich.com" target="_blank" title="Max Kostinevich">Max Kostinevich</a>
 			</div>
 		</div>
 	</div>
@@ -607,7 +612,13 @@ $_POST['user_role'][0]; // manager
 		section: '.group',
 		btnAdd:'#btnAdd-4',
 		btnRemove:'.btnRemove',
-		locale:'ru_RU'
+		locale:{
+      "multiField": {
+        "messages": {
+          "removeConfirmation": "Вы уверены, что вы хотите удалить этот элемент?"
+        }
+      }
+    }
 	});
 
 	$('#example-5').multifield({
