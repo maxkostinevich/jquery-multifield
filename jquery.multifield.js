@@ -96,7 +96,7 @@
 
 
 			// Clear input values
-			$('input[type=text],input[type=hidden],textarea', newChild).each(function () {
+			$('input[type!="radio"],textarea', newChild).each(function () {
 				$(this).val('');
 			});
 
